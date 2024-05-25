@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd 
 df = pd.read_csv('pokemon_data.csv')
 # print(df.head(5))
 df_txt = pd.read_csv('pokemon_data.txt',delimiter='\t')
@@ -32,6 +32,9 @@ df['Total1'] = df.iloc[:,4:10].sum(axis=1) ## 1 is horzontal axis
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 # df = df.drop(columns=['Total'])
 print(df)
+df.to_csv('pokenew.csv',index=False) #to save the new csv file
+df.to_excel('pokenew.xlsx',index=False) #to save the new excel file
+df.to_csv('pokenew.txt',index=False,sep='\t')
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
